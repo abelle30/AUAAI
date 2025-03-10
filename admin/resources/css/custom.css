@@ -1,0 +1,647 @@
+/*
+    Author: Rizielle Sabado-Jose, Santo Tomas e-Service Providers
+    Date: August 12, 2021
+*/
+@charset "windows-1252";
+
+.bg-black {
+    background-color: #2d2926 !important;
+}
+
+.bg-white {
+    background: white !important;
+}
+
+.bg-dkblue {
+    background: #323a45 !important;
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%) !important;
+}
+
+.bg-light-gray {
+    background: #ecf0f1 !important;
+}
+
+.bg-dkgold {
+    background: #fbb034 !important;
+}
+
+.bg-yellow {
+    background: #10A5D2 !important;
+}
+
+.home-slides {
+    background: url('../../resources/images/home/photogrid.jpg')center center no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+
+    height: calc(100vh -200px);
+}
+
+.dark-bg {
+    background: url('../../resources/images/bg/darkbg.jpg')center center no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+}
+
+.alumni-bg {
+    background: url('../../resources/images/bg/alumnibg.jpg')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.tac-bg {
+    background: url('../../resources/images/bg/tacbg.jpg')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-bg {
+    background: url('../../resources/images/bg/aboutbg.jpg')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.btn-outline-light:hover {
+    color: #2d2926;
+}
+
+.bg-midblue {
+    background: #004b79 !important;
+}
+
+.text-yellow {
+    color: #194572 !important;
+}
+
+.text-dkblue {
+    color: #323a45 !important;
+}
+
+.text-dkgold {
+    color: #fbb034 !important;
+}
+
+.text-blue {
+    color: #239fda !important;
+}
+
+.text-midblue, .text-primary {
+    color: #004b79 !important;
+}
+/*Carousel/Slide Home CSS*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+}
+/*Overlay Mask for background slide*/
+.dark-mask {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#footer{
+	padding: 20px 0px;
+	background: #f3f3f3;
+	text-align: center
+}
+
+.dark-mask.mask-primary {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.text-cinzel {
+    font-family: 'Cinzel', serif;
+}
+
+.carousel-cell {
+    width: 28%;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+}
+/* cell number */
+.carousel-cell:before {
+    display: block;
+}
+/*careers*/
+.career-box {
+    min-height: calc(100vh -195px);
+}
+
+.bg-image {
+    background-image: url('../../resources/images/bg/careerbg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.cover {
+    object-fit: cover;
+    width: 150px
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+/*events*/
+.square {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    background-color: #ccc;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery img {
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.perks img {
+    height: 150px;
+    padding-top: 10px;
+    object-fit: contain;
+    object-position: center;
+}
+/*Pagination*/
+.hide-item {
+    display: none;
+}
+/*Off-Canvas*/
+body.offcanvas-active {
+    overflow: hidden;
+}
+
+.offcanvas-header {
+    display: none;
+}
+
+.screen-overlay {
+    width: 0%;
+    height: 100%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition: opacity .2s linear, visibility .1s, width 1s ease-in;
+}
+
+.screen-overlay.show {
+    transition: opacity .5s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+
+
+
+@media all and (max-width:992px) {
+    
+    .offcanvas-header {
+        display: block;
+    }
+    .mobile-offcanvas {
+        visibility: hidden;
+        transform: translateX(-100%);
+        border-radius: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1200;
+        width: 80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    }
+    .mobile-offcanvas.show {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+#card_mobile a {
+    font-size: 12px;
+}
+
+/*Shop*/
+
+.img-wrap{
+    text-align: center;
+    overflow: hidden;
+    display: block;
+}
+
+.sale-bar{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 10;
+    text-align: left;
+    margin: 15px 10px;
+    
+}
+
+.slash-price{
+    text-decoration: line-through;
+}
+
+.list-check{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.list-check li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 13px;
+  color: #33b750;
+  margin-right: 10px;
+  content: "\f00c";
+}
+
+.checkbox-btn{
+    position: relative;
+}
+
+.checkbox-btn input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/*
+    Author: Rizielle Sabado-Jose, Santo Tomas e-Service Providers
+    Date: August 12, 2021
+*/
+@charset "windows-1252";
+
+.bg-black {
+    background-color: #2d2926 !important;
+}
+
+.bg-white {
+    background: white !important;
+}
+
+.bg-dkblue {
+    background: #323a45 !important;
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%) !important;
+}
+
+.bg-light-gray {
+    background: #ecf0f1 !important;
+}
+
+.bg-dkgold {
+    background: #fbb034 !important;
+}
+
+.bg-yellow {
+    background: #10A5D2 !important;
+}
+
+.home-slides {
+    background: url('../../resources/images/adamsonback.png')center center no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+
+    height: calc(100vh -200px);
+}
+
+.dark-bg {
+    background: url('../../resources/images/bg/darkbg.jpg')center center no-repeat;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+}
+
+.alumni-bg {
+    background: url('../../resources/images/bg/alumnibg.jpg')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.tac-bg {
+    background: url('../../resources/images/bg/tacbg.jpg')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about-bg {
+    background: url('../../resources/images/bg/aboutbg.jpg')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.btn-outline-light:hover {
+    color: #2d2926;
+}
+
+.bg-midblue {
+    background: #004b79 !important;
+}
+
+.text-yellow {
+    color: #194572 !important;
+}
+
+.text-dkblue {
+    color: #323a45 !important;
+}
+
+.text-dkgold {
+    color: #fbb034 !important;
+}
+
+.text-blue {
+    color: #239fda !important;
+}
+
+.text-midblue, .text-primary {
+    color: #004b79 !important;
+}
+/*Carousel/Slide Home CSS*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+}
+/*Overlay Mask for background slide*/
+.dark-mask {
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dark-mask.mask-primary {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.text-cinzel {
+    font-family: 'Cinzel', serif;
+}
+
+.carousel-cell {
+    width: 28%;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+}
+/* cell number */
+.carousel-cell:before {
+    display: block;
+}
+/*careers*/
+.career-box {
+    min-height: calc(100vh -195px);
+}
+
+.bg-image {
+    background-image: url('../../resources/images/bg/careerbg.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.cover {
+    object-fit: cover;
+    width: 150px
+}
+
+.text-normal {
+    font-weight: normal !important;
+}
+/*events*/
+.square {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    background-color: #ccc;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery img {
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.perks img {
+    height: 150px;
+    padding-top: 10px;
+    object-fit: contain;
+    object-position: center;
+}
+/*Pagination*/
+.hide-item {
+    display: none;
+}
+/*Off-Canvas*/
+body.offcanvas-active {
+    overflow: hidden;
+}
+
+.offcanvas-header {
+    display: none;
+}
+
+.screen-overlay {
+    width: 0%;
+    height: 100%;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.6);
+    transition: opacity .2s linear, visibility .1s, width 1s ease-in;
+}
+
+.screen-overlay.show {
+    transition: opacity .5s ease, width 0s;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+
+
+
+@media all and (max-width:992px) {
+    
+    .offcanvas-header {
+        display: block;
+    }
+    .mobile-offcanvas {
+        visibility: hidden;
+        transform: translateX(-100%);
+        border-radius: 0;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1200;
+        width: 80%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+    }
+    .mobile-offcanvas.show {
+        visibility: visible;
+        transform: translateX(0);
+    }
+}
+
+#card_mobile a {
+    font-size: 12px;
+}
+
+/*Shop*/
+
+.img-wrap{
+    text-align: center;
+    overflow: hidden;
+    display: block;
+}
+
+.sale-bar{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 10;
+    text-align: left;
+    margin: 15px 10px;
+    
+}
+
+.slash-price{
+    text-decoration: line-through;
+}
+
+.list-check{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.list-check li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 13px;
+  color: #33b750;
+  margin-right: 10px;
+  content: "\f00c";
+}
+
+.checkbox-btn{
+    position: relative;
+}
+
+.checkbox-btn input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.bg-image {
+    background-image: url('../../resources/images/adamsoncareerbackground.PNG');
+    background-size: cover;
+    background-position: center center;
+}
+.about-bg {
+    background: url('resources/images/adamsonabout.PNG')top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
